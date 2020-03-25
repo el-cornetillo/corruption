@@ -14,7 +14,7 @@ Script that takes some text as input and randomly modify words by using either
 
 ## Set up
 
-`pip install git+https://github.com/aylliote/corruption.git@master
+`pip install git+https://github.com/aylliote/corruption.git@master`
 
 ## Usage
 
