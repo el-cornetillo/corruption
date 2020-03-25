@@ -20,20 +20,20 @@ Script that takes some text as input and randomly modify words by using either
 
     usage: corruption [-h] [--seed SEED] [--syn SYN] [--typo TYPO] [--typo-first]
                       utterance
-
+    
     Corrupt some input text with synonym and mispells.
-
+    
     positional arguments:
       utterance     Utterance to corrupt
-
+    
     optional arguments:
       -h, --help    show this help message and exit
-      --seed SEED   Seed
-      --syn SYN     Number of synonym corruption iterations
-      --typo TYPO   Number of misspell corruption iterations
-      --typo-first  Inject misspells before synonyms
-          
-          
+      --seed SEED   Seed (defaults to 2020)
+      --syn SYN     Number of synonym corruption iterations (defaults to 0)
+      --typo TYPO   Number of misspell corruption iterations (defaults to 0)
+      --typo-first  Inject misspells before synonyms (defaults to False)
+
+             
  ## Reference
  
      Xiang Zhang and Junbo Zhao and Yann LeCun
