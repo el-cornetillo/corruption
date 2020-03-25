@@ -7,7 +7,6 @@
 
 # Python utilities to corrupt some input text
 
-
 Script that takes some text as input and randomly modify words by using either
 - Levenshtein edit operations
 - Synonym replacement, based on an open source Thesaurus from the Libre Office project (as reported in section 2.4 of paper below)
@@ -15,8 +14,7 @@ Script that takes some text as input and randomly modify words by using either
 
 ## Set up
 
-
-
+`pip install git+https://github.com/aylliote/corruption.git@master
 
 ## Usage
 
