@@ -16,14 +16,14 @@ def parse_args(args):
     parser.add_argument('utterance',
                         help='Utterance to corrupt')
     parser.add_argument('--seed',
-                        help='Seed', default=2020, type=int)
+                        help='Seed (defaults to 2020)', default=2020, type=int)
     parser.add_argument('--syn',
-                        help='Number of synonym corruption iterations', default=0, type=int)
+                        help='Number of synonym corruption iterations (defaults to 0)', default=0, type=int)
     parser.add_argument('--typo',
-                        help='Number of misspell corruption iterations', default=0, type=int)
+                        help='Number of misspell corruption iterations (defaults to 0)', default=0, type=int)
 
     parser.add_argument('--typo-first',
-                        help="Inject misspells before synonyms", action='store_true')
+                        help="Inject misspells before synonyms (defaults to False)", action='store_true')
 
     return parser.parse_args(args)
 
