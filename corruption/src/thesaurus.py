@@ -35,7 +35,7 @@ class Thesaurus:
 
     @staticmethod
     def _fetch_thesaurus(data_path: str) -> str:
-        dir_path = osp.join(osp.dirname(__file__), '..')
+        dir_path = osp.join(osp.dirname(__file__), '..', 'data')
         data_path = osp.join(dir_path, data_path)
         if not os.path.exists(data_path):
             print('Downloading thesaurus data ...')
