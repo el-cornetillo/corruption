@@ -7,5 +7,5 @@ setuptools.setup(
     description='Python utilities to corrupt some input text',
     author='Elliot',
     packages=setuptools.find_packages(),
-    install_requires=['numpy==1.18.*', 'requests==2.23.*', 'joblib==0.14.*'],
+    install_requires=open('requirements.txt').read().splitlines(),
     entry_points={ 'console_scripts': ['corruption=corruption.bin.corrupt:main'] })

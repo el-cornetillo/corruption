@@ -4,7 +4,6 @@
                                     / /__| (_) | |  | |  | |_| | |_) | |_ 
                                     \____/\___/|_|  |_|   \__,_| .__/ \__|
                                                                |_|        
-
 # Python utilities to corrupt some input text
 
 Script that takes some text as input and randomly modify words by using either
@@ -13,14 +12,12 @@ Script that takes some text as input and randomly modify words by using either
 
 Corruptions can be used as a data augmentation technique, or to benchmark NLP models robustness to misspells and/or synonyms.
 
+Requires: numpy, requests, joblib
 ## Set up
-
 ```bash
 $ pip install git+https://github.com/aylliote/corruption.git@master
 ```
-
 ## Exemple
-
 ```python
 from corruption import Corrupter
 
@@ -59,9 +56,7 @@ corrupter.corrupt(sample, syn=2, typo=3)
       --n_workers N_WORKERS
                             Number of threads for joblib parallelisation, 0 for
                             non-parallelisation (defaults to 0)
-
 ## Reference
-
 ```bibtex
 @misc{zhang2015characterlevel,
     title={Character-level Convolutional Networks for Text Classification},
