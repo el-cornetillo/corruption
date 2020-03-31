@@ -11,13 +11,13 @@ Script that takes some text as input and randomly modify words by using either
 - Levenshtein edit operations
 - Synonym replacement, based on an open source Thesaurus from the Libre Office project (as reported in section 2.4 of paper below)
 
+Corruptions can be used as a data augmentation technique, or to benchmark NLP models robustness to misspells and/or synonyms.
 
 ## Set up
 
 ```bash
 $ pip install git+https://github.com/aylliote/corruption.git@master
 ```
-
 
 ## Exemple
 
