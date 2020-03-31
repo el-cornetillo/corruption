@@ -1,9 +1,9 @@
-         ___                            _   
-        / __\___  _ __ _ __ _   _ _ __ | |_ 
-       / /  / _ \| '__| '__| | | | '_ \| __|
-      / /__| (_) | |  | |  | |_| | |_) | |_ 
-      \____/\___/|_|  |_|   \__,_| .__/ \__|
-                                 |_|        
+                     ___                            _   
+                    / __\___  _ __ _ __ _   _ _ __ | |_ 
+                   / /  / _ \| '__| '__| | | | '_ \| __|
+                  / /__| (_) | |  | |  | |_| | |_) | |_ 
+                  \____/\___/|_|  |_|   \__,_| .__/ \__|
+                                             |_|        
 
 # Python utilities to corrupt some input text
 
@@ -14,7 +14,10 @@ Script that takes some text as input and randomly modify words by using either
 
 ## Set up
 
-`pip install git+https://github.com/aylliote/corruption.git@master`
+```bash
+$ pip install git+https://github.com/aylliote/corruption.git@master
+```
+
 
 ## Exemple
 
@@ -33,25 +36,38 @@ corr.corrupt(sample, syn=2, typo=3)
 ```
 ## Usage
 
-    usage: corruption [-h] [--seed SEED] [--syn SYN] [--typo TYPO] [--typo-first]
-                      utterance
+    usage: corruption [-h] [--col COL] [--seed SEED] [--syn SYN] [--typo TYPO]
+                      [--typo-first] [--n_workers N_WORKERS]
+                      input output
     
     Corrupt some input text with synonym and mispells.
     
     positional arguments:
-      utterance     Utterance to corrupt
+      input                 path to input CSV to corrupt
+      output                output file to save result CSV
     
     optional arguments:
-      -h, --help    show this help message and exit
-      --seed SEED   Seed (defaults to 2020)
-      --syn SYN     Number of synonym corruption iterations (defaults to 0)
-      --typo TYPO   Number of misspell corruption iterations (defaults to 0)
-      --typo-first  Inject misspells before synonyms (defaults to False)
+      -h, --help            show this help message and exit
+      --col COL             Column that contains the text to be corrupted
+      --seed SEED           Seed for reproducibility (defaults to 2020)
+      --syn SYN             Number of synonym corruption iterations (defaults to
+                            0)
+      --typo TYPO           Number of misspell corruption iterations (defaults to
+                            0)
+      --typo-first          Inject misspells before synonyms (defaults to False)
+      --n_workers N_WORKERS
+                            Number of threads for joblib parallelisation, 0 for
+                            non-parallelisation (defaults to 0)
 
-             
- ## Reference
- 
-     Xiang Zhang and Junbo Zhao and Yann LeCun
-     https://arxiv.org/abs/1509.01626
-     Character-level Convolutional Networks for Text Classification
-     2015
+## Reference
+
+```bibtex
+@misc{zhang2015characterlevel,
+    title={Character-level Convolutional Networks for Text Classification},
+    author={Xiang Zhang and Junbo Zhao and Yann LeCun},
+    year={2015},
+    eprint={1509.01626},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+```
