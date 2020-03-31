@@ -16,6 +16,21 @@ Script that takes some text as input and randomly modify words by using either
 
 `pip install git+https://github.com/aylliote/corruption.git@master`
 
+## Exemple
+
+```python
+from corruption import Corrupter
+corr = Corrupter()
+sample = "Il fut attiré par cette belle couleur et décida d’y séjourner quelque temps"
+corr.corrupt(sample, syn=1, typo=0)
+>>> 'Il fut prédisposé par une charmante coloriant et décida d’y habiter pour période'
+
+corr.corrupt(sample, syn=0, typo=3)
+>>> 'Il mfut tatiré par cetet belle colueur et wécida d’y sgjourner quelque temzps'
+
+corr.corrupt(sample, syn=2, typo=3)
+>>> 'Il fut sujet pax la admirable tilnctorial et décidau d’y habiter auprès âge'
+```
 ## Usage
 
     usage: corruption [-h] [--seed SEED] [--syn SYN] [--typo TYPO] [--typo-first]
