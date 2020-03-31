@@ -35,7 +35,7 @@ corrupter.corrupt(sample, syn=0, typo=3)
 corrupter.corrupt(sample, syn=2, typo=3)
 >>> 'Il fut sujet pax la admirable tilnctorial et décidau d’y habiter auprès âge'
 ```
-## Usage
+## CLI Usage
 
     usage: corruption [-h] [--col COL] [--seed SEED] [--syn SYN] [--typo TYPO]
                       [--typo-first] [--n_workers N_WORKERS]
