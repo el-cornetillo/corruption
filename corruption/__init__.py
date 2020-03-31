@@ -1,1 +1,1 @@
-from corruption.src.misspell import MisspellCorrupter
+from .src import Corrupter
